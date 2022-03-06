@@ -11,12 +11,12 @@ fn build_full_name(person: &Person) -> String {
 
     // match &person.middle {
     //     Some(middle) => full_name.push_str(&middle);
-    //     - => full_name.push_str(" ")
+    //     _ => full_name.push_str(" ")
     // }
 
     if let Some(middle) = &person.middle {
         full_name.push_str(&middle);
-        full_name.push_str("")       
+        full_name.push_str(" ")       
     }
 
     full_name.push_str(&person.last);
